@@ -192,37 +192,54 @@ TOKEN_NUM  = 3
 TOKEN_NAME = 4
 TOKEN_PUNC = 5
 
+
 REGISTERS = {
-    'rax'   , 'eax'   , 'ax'    , 'al'    , 'ah'   ,
-    'rbx'   , 'ebx'   , 'bx'    , 'bl'    , 'bh'   ,
-    'rcx'   , 'ecx'   , 'cx'    , 'cl'    , 'ch'   ,
-    'rdx'   , 'edx'   , 'dx'    , 'dl'    , 'dh'   ,
-    'rsi'   , 'esi'   , 'si'    , 'sil'   ,
-    'rdi'   , 'edi'   , 'di'    , 'dil'   ,
-    'rbp'   , 'ebp'   , 'bp'    , 'bpl'   ,
-    'rsp'   , 'esp'   , 'sp'    , 'spl'   ,
-    'r8'    , 'r8d'   , 'r8w'   , 'r8b'   ,
-    'r9'    , 'r9d'   , 'r9w'   , 'r9b'   ,
-    'r10'   , 'r10d'  , 'r10w'  , 'r10b'  ,
-    'r11'   , 'r11d'  , 'r11w'  , 'r11b'  ,
-    'r12'   , 'r12d'  , 'r12w'  , 'r12b'  ,
-    'r13'   , 'r13d'  , 'r13w'  , 'r13b'  ,
-    'r14'   , 'r14d'  , 'r14w'  , 'r14b'  ,
-    'r15'   , 'r15d'  , 'r15w'  , 'r15b'  ,
-    'mm0'   , 'mm1'   , 'mm2'   , 'mm3'   , 'mm4'   , 'mm5'   , 'mm6'   , 'mm7'   ,
-    'xmm0'  , 'xmm1'  , 'xmm2'  , 'xmm3'  , 'xmm4'  , 'xmm5'  , 'xmm6'  , 'xmm7'  ,
-    'xmm8'  , 'xmm9'  , 'xmm10' , 'xmm11' , 'xmm12' , 'xmm13' , 'xmm14' , 'xmm15' ,
-    'xmm16' , 'xmm17' , 'xmm18' , 'xmm19' , 'xmm20' , 'xmm21' , 'xmm22' , 'xmm23' ,
-    'xmm24' , 'xmm25' , 'xmm26' , 'xmm27' , 'xmm28' , 'xmm29' , 'xmm30' , 'xmm31' ,
-    'ymm0'  , 'ymm1'  , 'ymm2'  , 'ymm3'  , 'ymm4'  , 'ymm5'  , 'ymm6'  , 'ymm7'  ,
-    'ymm8'  , 'ymm9'  , 'ymm10' , 'ymm11' , 'ymm12' , 'ymm13' , 'ymm14' , 'ymm15' ,
-    'ymm16' , 'ymm17' , 'ymm18' , 'ymm19' , 'ymm20' , 'ymm21' , 'ymm22' , 'ymm23' ,
-    'ymm24' , 'ymm25' , 'ymm26' , 'ymm27' , 'ymm28' , 'ymm29' , 'ymm30' , 'ymm31' ,
-    'zmm0'  , 'zmm1'  , 'zmm2'  , 'zmm3'  , 'zmm4'  , 'zmm5'  , 'zmm6'  , 'zmm7'  ,
-    'zmm8'  , 'zmm9'  , 'zmm10' , 'zmm11' , 'zmm12' , 'zmm13' , 'zmm14' , 'zmm15' ,
-    'zmm16' , 'zmm17' , 'zmm18' , 'zmm19' , 'zmm20' , 'zmm21' , 'zmm22' , 'zmm23' ,
-    'zmm24' , 'zmm25' , 'zmm26' , 'zmm27' , 'zmm28' , 'zmm29' , 'zmm30' , 'zmm31' ,
-    'rip'   ,
+    'rax', 'eax', 'ax', 'al', 'ah',
+    'rbx', 'ebx', 'bx', 'bl', 'bh',
+    'rcx', 'ecx', 'cx', 'cl', 'ch',
+    'rdx', 'edx', 'dx', 'dl', 'dh',
+    'rsi', 'esi', 'si', 'sil',
+    'rdi', 'edi', 'di', 'dil',
+    'rbp', 'ebp', 'bp', 'bpl',
+    'rsp', 'esp', 'sp', 'spl',
+    'r8', 'r8d', 'r8w', 'r8b',
+    'r9', 'r9d', 'r9w', 'r9b',
+    'r10', 'r10d', 'r10w', 'r10b',
+    'r11', 'r11d', 'r11w', 'r11b',
+    'r12', 'r12d', 'r12w', 'r12b',
+    'r13', 'r13d', 'r13w', 'r13b',
+    'r14', 'r14d', 'r14w', 'r14b',
+    'r15', 'r15d', 'r15w', 'r15b',
+    'r16', 'r16d', 'r16w', 'r16b',
+    'r17', 'r17d', 'r17w', 'r17b',
+    'r18', 'r18d', 'r18w', 'r18b',
+    'r19', 'r19d', 'r19w', 'r19b',
+    'r20', 'r20d', 'r20w', 'r20b',
+    'r21', 'r21d', 'r21w', 'r21b',
+    'r22', 'r22d', 'r22w', 'r22b',
+    'r23', 'r23d', 'r23w', 'r23b',
+    'r24', 'r24d', 'r24w', 'r24b',
+    'r25', 'r25d', 'r25w', 'r25b',
+    'r26', 'r26d', 'r26w', 'r26b',
+    'r27', 'r27d', 'r27w', 'r27b',
+    'r28', 'r28d', 'r28w', 'r28b',
+    'r29', 'r29d', 'r29w', 'r29b',
+    'r30', 'r30d', 'r30w', 'r30b',
+    'r31', 'r31d', 'r31w', 'r31b',
+    'mm0', 'mm1', 'mm2', 'mm3', 'mm4', 'mm5', 'mm6', 'mm7',
+    'xmm0', 'xmm1', 'xmm2', 'xmm3', 'xmm4', 'xmm5', 'xmm6', 'xmm7',
+    'xmm8', 'xmm9', 'xmm10', 'xmm11', 'xmm12', 'xmm13', 'xmm14', 'xmm15',
+    'xmm16', 'xmm17', 'xmm18', 'xmm19', 'xmm20', 'xmm21', 'xmm22', 'xmm23',
+    'xmm24', 'xmm25', 'xmm26', 'xmm27', 'xmm28', 'xmm29', 'xmm30', 'xmm31',
+    'ymm0', 'ymm1', 'ymm2', 'ymm3', 'ymm4', 'ymm5', 'ymm6', 'ymm7',
+    'ymm8', 'ymm9', 'ymm10', 'ymm11', 'ymm12', 'ymm13', 'ymm14', 'ymm15',
+    'ymm16', 'ymm17', 'ymm18', 'ymm19', 'ymm20', 'ymm21', 'ymm22', 'ymm23',
+    'ymm24', 'ymm25', 'ymm26', 'ymm27', 'ymm28', 'ymm29', 'ymm30', 'ymm31',
+    'zmm0', 'zmm1', 'zmm2', 'zmm3', 'zmm4', 'zmm5', 'zmm6', 'zmm7',
+    'zmm8', 'zmm9', 'zmm10', 'zmm11', 'zmm12', 'zmm13', 'zmm14', 'zmm15',
+    'zmm16', 'zmm17', 'zmm18', 'zmm19', 'zmm20', 'zmm21', 'zmm22', 'zmm23',
+    'zmm24', 'zmm25', 'zmm26', 'zmm27', 'zmm28', 'zmm29', 'zmm30', 'zmm31',
+    'rip',
 }
 
 class Token:
@@ -349,7 +366,7 @@ class Tokenizer:
             return Token.num(self._immv(self._rch()))
         elif ch.isdigit():
             return Token.num(self._immv(ch))
-        elif ch.isidentifier():
+        elif ch == '.' or ch.isidentifier():  # Allow labels starting with '.'
             return self._name(ch)
         elif ch in ('(', ')', ',', '*'):
             return Token.punc(ch)
@@ -484,7 +501,7 @@ class Instruction:
             raise SyntaxError('unknown instruction: ' + self.mnemonic)
         else:
             return func
-    
+
     @property
     def jmptab(self) -> Optional[str]:
         if self.mnemonic == 'leaq' and isinstance(self.operands[0], Memory) and self.operands[0].base.reg == 'rip':
@@ -549,7 +566,6 @@ class Instruction:
             return ins.encode()
         else:
             return cls._encode_r32(ins)
-
     def _encode_rel(self, rel: Label, sizing: bool, offset: int) -> RIPRelativeOffset:
         if rel.offs is not None:
             return RIPRelativeOffset(rel.offs)
@@ -883,6 +899,7 @@ class Instruction:
         else:
             raise SyntaxError('invalid token: ' + repr(ntk))
 
+
     @classmethod
     def _parse_operands(cls, lex: Tokenizer) -> List[Operand]:
         ret = []
@@ -1087,7 +1104,6 @@ class PrototypeMap(Dict[str, Prototype]):
             return cls._align(8), False
         else:
             raise cls._err('unrecognized type "%s"' % name)
-
     @classmethod
     def _func(cls, src: List[str], idx: int, depth: int = 0) -> Tuple[str, int]:
         for i in range(idx, len(src)):
@@ -1832,6 +1848,8 @@ class CodeSection:
             raise SyntaxError('unresolved reference to name: ' + name)
 
     def _alloc_instr(self, instr: Instruction):
+        if instr.mnemonic.upper() == 'ENDBR64':
+            return
         if not instr.is_branch_label:
             self.block.body.append(X86Instr(instr))
         else:
@@ -2199,6 +2217,24 @@ class Assembler:
             '.build_version'           : self._cmd_nop,
             '.end_data_region'         : self._cmd_nop,
             '.subsections_via_symbols' : self._cmd_nop,
+            '.text': self._cmd_nop,
+            '.data': self._cmd_nop,
+            '.file': self._cmd_nop, 
+            '.bss': self._cmd_nop,
+            '.type': self._cmd_nop,
+            '.cfi_startproc': self._cmd_nop, 
+            '.cfi_endproc': self._cmd_nop,   
+            '.loc': self._cmd_nop,           
+            '.cfi_def_cfa': self._cmd_nop,    
+            '.cfi_def_cfa_register': self._cmd_nop, 
+            '.cfi_def_cfa_offset': self._cmd_nop,   
+            '.cfi_adjust_cfa_offset': self._cmd_nop, 
+            '.cfi_offset': self._cmd_nop,      
+            '.cfi_rel_offset': self._cmd_nop,  
+            '.cfi_personality': self._cmd_nop, 
+            '.cfi_lsda': self._cmd_nop,
+            '.size': self._cmd_nop,
+            '.ident': self._cmd_nop,
         }
 
     @staticmethod
@@ -2227,26 +2263,22 @@ class Assembler:
         for line in src:
             line = self._remove_comments(line)
             line = line.strip()
-
-            # skip empty lines
             if not line:
                 continue
-
-            # labels, resolve the offset
             if line[-1] == ':':
                 self.code.label(line[:-1])
                 continue
-
-            # instructions
             if line[0] != '.':
+                if line.strip().upper().startswith('ENDBR64'):
+                    self.code.blocks[-1].body.append(CommentInstr('ENDBR64 skipped'))
+                    continue
                 self.code.instr(Instruction.parse(line))
                 continue
-
-            # parse the command
+            if line.strip().upper().startswith('ENDBR64'):
+                self.code.blocks[-1].body.append(CommentInstr('ENDBR64 skipped'))
+                continue
             cmd = Command.parse(line)
             func = self._commands.get(cmd.cmd)
-
-            # handle the command
             if func is not None:
                 func(cmd.args)
             else:
